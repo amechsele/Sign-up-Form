@@ -1,0 +1,152 @@
+@font-face {
+  font-family: Norse;
+  src: url(Norse-Bold.otf);;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #000;
+}
+.container {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /*gap: 4px;*/
+}
+.container div {
+  /*padding: 0px;*/
+  font-size: 18px;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+.left{
+  grid-column: 1;
+  background-image: url(background-image.jpg);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+.logo {
+  height: 20vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.logo img{
+  height: 100%;
+}
+
+.logo h1{
+  color: white;
+  font-size: 80px;
+  font-family: Norse, sans-serif;
+}
+
+.footer {
+  align-self: center;
+  position: fixed;
+  bottom: 0;
+  font-size: 0.1em;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.footer a {
+  color: white;
+}
+.right{
+  grid-column: 2;
+  background-color: #fff;
+  padding: 0px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.form-child {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 50px;
+  padding-left: 20px;
+}
+
+.middle p, .top p {
+  padding-left: 20px;
+  /*font-weight: 100;*/
+}
+
+.top {
+  background-color: azure;
+  align-self: center;
+}
+
+.middle {
+  background-color: #fff;
+  padding-top: 10px;
+}
+
+.bottom {
+  background-color: azure;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+input {
+  height: 25px;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: 100;
+  font-size: 0.75rem;
+}
+
+button {
+  margin-bottom: 20px;
+  padding: 10px 40px;
+  background-color: #596d48;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: none;
+}
+
+.bottom a {
+  color: #596d48;
+}
+
+input:focus {
+  border: 3px solid blue;
+  box-shadow: 0 0 5px 1px lightblue;;
+}
+
+input:invalid {
+  border: 3px solid red;
+}
+
+.error {
+  color: red;
+  font-size: 0.75rem;
+}
